@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>hello Worlds!!!</h1>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title">My Website</div>
+            <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+                &#9776;
+            </a>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("navbar-links");
+            if (x.className === "navbar-links") {
+                x.className += " active";
+            } else {
+                x.className = "navbar-links";
+            }
+        }
+    </script>
 </body>
 </html>
